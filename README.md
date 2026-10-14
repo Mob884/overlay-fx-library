@@ -16,8 +16,8 @@
 ## What's in this repo
 
 - `version.json` — force-update + catalog version check (your app polls this)
-- `catalog/overlays.json` — full metadata for all 10,000 overlays
-- `catalog/by_category/<cat>.json` — per-category splits for lazy loading
+- `catalog/index.json` — master index: categories → chunk files, collections, tier counts
+- `catalog/by_category/<cat>_p<1-5>.json` — 50 chunks × 200 overlays (lazy-load per category)
 - `generator/build_overlays.py` — the generator script (fully resumable)
 
 ## What's NOT in this repo (by design)
